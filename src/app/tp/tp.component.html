@@ -1,0 +1,35 @@
+<div class="container" style="margin-top: 10%;">
+
+  <input  type="text" [(ngModel)]="titre"/>
+  <input  type="text" [(ngModel)]="description"/>
+
+  <button (click)="addFilm()">AJOUTER FILM</button>
+
+
+  <table class="table table-bordered border-primary">
+
+    <thead>
+      <tr>
+          <th>#</th>
+          <th>Titre</th>
+          <th>Description</th>
+          <th>Action</th>
+
+      </tr>
+    </thead>
+
+          <tbody>
+                <tr *ngFor="let film of films let i = index">
+
+                  <th> {{ i + 1 }} </th>
+                  <th> {{ film.titre }} </th>
+                  <th> {{ film.description }} </th>
+                  <th>
+                      <button (click)="removeFilm(i)">Supprimer</button>
+
+                  </th>
+                </tr>
+          </tbody>
+
+  </table>
+</div>

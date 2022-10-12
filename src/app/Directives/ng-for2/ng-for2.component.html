@@ -1,0 +1,35 @@
+<div class="container" style="margin-top: 10%;">
+
+  <table class="table table-bordered border-primary">
+
+    <thead>
+      <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Notes</th>
+      </tr>
+    </thead>
+          <tbody>
+                <tr *ngFor="let etudiant of etudiants let i = index">
+
+                  <th> {{ i + 1 }} </th>
+                  <th> {{ etudiant.name }}</th>
+                  <th> {{ etudiant.email}}</th>
+                  <th>
+                    <table class="table table-border">
+                        <tbody>
+                          <tr *ngFor="let note of etudiant.notes">
+
+                              <th> {{ note.matier }} </th>
+                              <th> {{ note.note }} </th>
+                          </tr>
+                        </tbody>
+                    </table>
+                  </th>
+
+                </tr>
+          </tbody>
+
+  </table>
+</div>

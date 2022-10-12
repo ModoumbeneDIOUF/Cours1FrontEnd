@@ -1,0 +1,30 @@
+<div class="container" style="margin-top: 10%;">
+
+  <table class="table table-bordered border-primary">
+
+    <thead>
+      <tr>
+
+          <th>#</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Principal</th>
+          <th>Date</th>
+
+      </tr>
+    </thead>
+
+          <tbody>
+                <tr *ngFor="let film of films let i = index">
+
+                  <th> {{ i + 1 }} </th>
+                  <th> {{ film.type }} </th>
+                  <th> {{ film.description }} </th>
+                  <th> {{ film.principal }} </th>
+                  <th> {{ film.date }} </th>
+
+                </tr>
+          </tbody>
+
+  </table>
+</div>

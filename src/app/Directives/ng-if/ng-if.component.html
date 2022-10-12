@@ -1,0 +1,18 @@
+<input  type="checkbox" [(ngModel)] ="showMe"/>
+
+<p *ngIf="showMe; then thenBlock; else elseBlock "></p>
+
+
+<ng-template #thenBlock>
+
+  <p>show me checked</p>
+
+</ng-template>
+
+
+<ng-template #elseBlock>
+
+  <p>show me unchecked</p>
+
+</ng-template>
+
